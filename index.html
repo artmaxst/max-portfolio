@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Анализ воронки продаж, рекламных источников, CRM и бизнес-процессов для застройщиков и B2C-компаний.">
+  <meta name="theme-color" content="#0a0b0c">
+  <title>Макс — консультант по воронке продаж и маркетинговой аналитике</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1020'/%3E%3Cpath d='M15 41V23l17 12 17-12v18' fill='none' stroke='%23c7ff4a' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="site-header">
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#examples">Примеры разбора</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#about">Опыт</a>
+      <a class="nav-cta" href="#contact">Написать в Telegram</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span class="sr-only">Открыть меню</span>
+    </button>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация" hidden>
+      <a href="#services">Услуги</a>
+      <a href="#examples">Примеры разбора</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#about">Опыт</a>
+      <a href="#contact">Написать в Telegram</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-network" aria-hidden="true">
+        <svg viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="heroLine" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#d6ff5f" stop-opacity=".08"/>
+              <stop offset=".55" stop-color="#d6ff5f" stop-opacity=".72"/>
+              <stop offset="1" stop-color="#72ffe2"/>
+            </linearGradient>
+            <radialGradient id="heroGoal" cx="42%" cy="38%" r="70%">
+              <stop offset="0" stop-color="#7a8fff"/>
+              <stop offset=".5" stop-color="#3558ff"/>
+              <stop offset="1" stop-color="#1831b5"/>
+            </radialGradient>
+            <filter id="heroGlow" x="-100%" y="-100%" width="300%" height="300%">
+              <feGaussianBlur stdDeviation="8" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <g class="hero-grid">
+            <path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200M0 600H1200"/>
+            <path d="M120 0V720M240 0V720M360 0V720M480 0V720M600 0V720M720 0V720M840 0V720M960 0V720M1080 0V720"/>
+          </g>
+
+          <g class="hero-routes">
+            <path class="hero-route-base" d="M40 126 C320 126 520 330 870 360"/>
+            <path class="hero-route-base" d="M40 264 C340 264 550 345 870 360"/>
+            <path class="hero-route-base" d="M40 456 C340 456 550 375 870 360"/>
+            <path class="hero-route-base" d="M40 594 C320 594 520 390 870 360"/>
+            <path class="hero-route-live hero-route-a" d="M40 126 C320 126 520 330 870 360"/>
+            <path class="hero-route-live hero-route-b" d="M40 264 C340 264 550 345 870 360"/>
+            <path class="hero-route-live hero-route-c" d="M40 456 C340 456 550 375 870 360"/>
+            <path class="hero-route-live hero-route-d" d="M40 594 C320 594 520 390 870 360"/>
+
+            <circle class="hero-signal" r="6"><animateMotion dur="4.8s" repeatCount="indefinite" path="M40 126 C320 126 520 330 870 360"/></circle>
+            <circle class="hero-signal" r="6"><animateMotion begin="-1.2s" dur="4.8s" repeatCount="indefinite" path="M40 264 C340 264 550 345 870 360"/></circle>
+            <circle class="hero-signal" r="6"><animateMotion begin="-2.4s" dur="4.8s" repeatCount="indefinite" path="M40 456 C340 456 550 375 870 360"/></circle>
+            <circle class="hero-signal" r="6"><animateMotion begin="-3.6s" dur="4.8s" repeatCount="indefinite" path="M40 594 C320 594 520 390 870 360"/></circle>
+          </g>
+
+          <g class="hero-merge" transform="translate(870 360)">
+            <circle class="hero-merge-ring ring-outer" r="82"/>
+            <circle class="hero-merge-ring ring-inner" r="48"/>
+            <circle class="hero-merge-core" r="11"/>
+          </g>
+
+          <path class="hero-output" d="M870 360 H970"/>
+          <g class="hero-goal" transform="translate(1050 360)">
+            <circle class="hero-goal-wave" r="86"/>
+            <circle class="hero-goal-orbit" r="72"/>
+            <circle class="hero-goal-core" r="58"/>
+            <text y="-8">БИЗНЕС-ЦЕЛЬ</text>
+            <text class="hero-goal-main" y="17">Результат</text>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-inner section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Воронка продаж · Аналитика · CRM</p>
+          <h1 id="hero-title">Помогаю находить потери<br>в воронке продаж.</h1>
+          <p class="hero-lead">Анализирую CRM, рекламные источники и процессы, чтобы понять, где теряются лиды и деньги.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#contact">Написать в Telegram <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-meta reveal" aria-label="Ключевые факты">
+          <div class="meta-card active"><small>Опыт</small><strong>Более 4 лет в аналитике и B2B</strong></div>
+          <div class="meta-card"><small>Фокус</small><strong>Маркетинг × CRM × продажи</strong></div>
+          <div class="meta-card"><small>Специализация</small><strong>Воронка, данные и процессы</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell help" id="services">
+      <div class="section-intro reveal">
+        <p class="section-kicker">Чем помогаю</p>
+        <h2>Помогаю увидеть, где бизнес<br>теряет лиды и деньги.</h2>
+      </div>
+      <div class="system-map reveal" role="img" aria-label="CRM, данные, команда и продукт сходятся в конечную точку — задачу бизнеса">
+        <div class="map-sources" aria-hidden="true">
+          <span style="--source-delay: 0s">CRM</span>
+          <span style="--source-delay: .55s">Реклама</span>
+          <span style="--source-delay: 1.1s">Продажи</span>
+          <span style="--source-delay: 1.65s">Данные</span>
+        </div>
+        <div class="map-routes" aria-hidden="true">
+          <svg viewBox="0 0 620 240" preserveAspectRatio="none">
+            <path class="route route-base" d="M0 24 C190 24 330 120 620 120"/>
+            <path class="route route-base" d="M0 88 C210 88 350 120 620 120"/>
+            <path class="route route-base" d="M0 152 C210 152 350 120 620 120"/>
+            <path class="route route-base" d="M0 216 C190 216 330 120 620 120"/>
+            <path class="route route-live route-one" d="M0 24 C190 24 330 120 620 120"/>
+            <path class="route route-live route-two" d="M0 88 C210 88 350 120 620 120"/>
+            <path class="route route-live route-three" d="M0 152 C210 152 350 120 620 120"/>
+            <path class="route route-live route-four" d="M0 216 C190 216 330 120 620 120"/>
+            <circle class="route-signal signal-one" r="5"><animateMotion dur="3.6s" repeatCount="indefinite" path="M0 24 C190 24 330 120 620 120"/></circle>
+            <circle class="route-signal signal-two" r="5"><animateMotion begin="-.9s" dur="3.6s" repeatCount="indefinite" path="M0 88 C210 88 350 120 620 120"/></circle>
+            <circle class="route-signal signal-three" r="5"><animateMotion begin="-1.8s" dur="3.6s" repeatCount="indefinite" path="M0 152 C210 152 350 120 620 120"/></circle>
+            <circle class="route-signal signal-four" r="5"><animateMotion begin="-2.7s" dur="3.6s" repeatCount="indefinite" path="M0 216 C190 216 330 120 620 120"/></circle>
+          </svg>
+        </div>
+        <div class="map-target">
+          <span class="target-pulse" aria-hidden="true"></span>
+          <small>Конечная точка</small>
+          <strong>Задача<br>бизнеса</strong>
+        </div>
+      </div>
+      <div class="help-grid">
+        <article class="help-item reveal"><span>01</span><h3>Анализирую воронку</h3><p>Нахожу этапы, где теряются лиды и падает конверсия.</p></article>
+        <article class="help-item reveal"><span>02</span><h3>Разбираю рекламные источники</h3><p>Помогаю понять, какие каналы приводят качественные обращения.</p></article>
+        <article class="help-item reveal"><span>03</span><h3>Выстраиваю CRM-логику</h3><p>Помогаю настроить этапы, статусы и движение лида.</p></article>
+        <article class="help-item reveal"><span>04</span><h3>Разбираю процессы</h3><p>Ищу разрывы между маркетингом, продажами и аналитикой.</p></article>
+      </div>
+    </section>
+
+    <section class="services section-shell">
+      <div class="section-intro reveal">
+        <p class="section-kicker">Форматы работы</p>
+        <h2>Подключаюсь там, где<br>нужно навести ясность.</h2>
+      </div>
+      <div class="service-list">
+        <article class="service-card featured reveal">
+          <div class="service-num">01</div>
+          <div><h3>Аудит CRM и воронки</h3><p>Разберу путь клиента от обращения до сделки и найду основные точки потери лидов.</p></div>
+          <ul><li>Этапы и конверсии</li><li>Точки потерь</li><li>План изменений</li></ul>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-num">02</div>
+          <div><h3>Анализ рекламных источников</h3><p>Разберу качество обращений и помогу понять, какие каналы реально работают на продажи.</p></div>
+          <ul><li>Качество лидов</li><li>Сравнение каналов</li><li>Рекомендации</li></ul>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-num">03</div>
+          <div><h3>CRM и бизнес-процессы</h3><p>Помогу выстроить понятную логику воронки и правила работы с лидами.</p></div>
+          <ul><li>Логика CRM</li><li>Статусы и этапы</li><li>Требования к аналитике</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="examples section-shell" id="examples" aria-labelledby="examples-title">
+      <div class="section-intro reveal">
+        <p class="section-kicker">Примеры разбора</p>
+        <h2 id="examples-title">Что вы получите<br>по итогам анализа.</h2>
+      </div>
+      <div class="example-grid">
+        <article class="example-card example-funnel reveal">
+          <div class="example-head"><span>01 · Аудит воронки</span><b>Точки потерь</b></div>
+          <h3>От обращения до сделки</h3>
+          <div class="funnel-demo" aria-label="Демонстрационная воронка: 240 обращений, 154 квалифицированных лида, 72 встречи, 18 сделок">
+            <div style="--level: 100%"><span>Обращения</span><strong data-counter="240">240</strong></div>
+            <div style="--level: 72%"><span>Квалифицировано</span><strong data-counter="154">154</strong></div>
+            <div class="drop" style="--level: 46%"><span>Встречи</span><strong data-counter="72">72</strong></div>
+            <div style="--level: 27%"><span>Сделки</span><strong data-counter="18">18</strong></div>
+          </div>
+          <p class="example-insight">Главная зона внимания: переход от квалификации к встрече — здесь теряется 53% лидов.</p>
+        </article>
+
+        <article class="example-card example-sources reveal">
+          <div class="example-head"><span>02 · Рекламные источники</span><b>Качество лидов</b></div>
+          <h3>Не только количество обращений</h3>
+          <div class="source-demo" aria-label="Демонстрационное сравнение рекламных источников">
+            <div><span>Контекст</span><i style="--bar: 76%"></i><strong data-counter="11" data-suffix="%">11%</strong></div>
+            <div><span>Органика</span><i style="--bar: 92%"></i><strong data-counter="17" data-suffix="%">17%</strong></div>
+            <div class="weak"><span>Соцсети</span><i style="--bar: 25%"></i><strong data-counter="3" data-suffix="%">3%</strong></div>
+            <div><span>Рекомендации</span><i style="--bar: 100%"></i><strong data-counter="24" data-suffix="%">24%</strong></div>
+          </div>
+          <p class="example-insight">Соцсети дают много обращений, но хуже конвертируются в сделки. Проверяем таргетинг и критерии качества.</p>
+        </article>
+
+        <article class="example-card example-process reveal">
+          <div class="example-head"><span>03 · CRM и процесс</span><b>Логика работы</b></div>
+          <h3>Понятный маршрут каждого лида</h3>
+          <div class="process-demo" aria-label="Демонстрационная CRM-логика от нового лида до сделки">
+            <div><small>01</small><span>Новый лид</span><em>Ответственный назначен</em></div>
+            <div><small>02</small><span>Первичный контакт</span><em>Срок — 15 минут</em></div>
+            <div><small>03</small><span>Квалификация</span><em>Причина отказа обязательна</em></div>
+            <div><small>04</small><span>Встреча / сделка</span><em>Следующий шаг зафиксирован</em></div>
+          </div>
+          <p class="example-insight">Результат: единые статусы, понятные переходы и данные, на которые можно опираться.</p>
+        </article>
+      </div>
+      <p class="examples-note reveal">Все цифры и схемы в этом разделе демонстрационные и не относятся к конкретным компаниям.</p>
+    </section>
+
+    <section class="cases section-shell" id="cases">
+      <div class="section-intro reveal">
+        <p class="section-kicker">Из практики</p>
+        <h2>Реальные задачи.<br>Конкретная роль.</h2>
+      </div>
+      <div class="case-grid">
+        <article class="case-card case-dark reveal">
+          <div class="case-top"><span>Воронка и аналитика</span><b>01</b></div>
+          <h3>Анализ воронки для девелопера</h3>
+          <p>Разобрал CRM-воронку, источники лидов и передачу данных. Помог сформировать требования к корректной аналитике.</p>
+          <div class="case-bottom"><span>CRM</span><span>Источники</span><span>Аналитика</span></div>
+        </article>
+        <article class="case-card case-blue reveal">
+          <div class="case-top"><span>CRM и процессы</span><b>02</b></div>
+          <h3>Перестройка логики воронки</h3>
+          <p>Разобрал движение лидов и выявил разрывы в CRM-логике. Помог сформировать новую структуру этапов.</p>
+          <div class="case-bottom"><span>Диагностика</span><span>CRM</span><span>Воронка</span></div>
+        </article>
+        <article class="case-card case-lime reveal">
+          <div class="case-top"><span>Данные и аналитика</span><b>03</b></div>
+          <h3>Поиск расхождений в данных</h3>
+          <p>Сопоставил рекламные и CRM-данные, нашёл возможные причины расхождений и сформировал рекомендации.</p>
+          <div class="case-bottom"><span>Источники</span><span>Метрики</span><span>Данные</span></div>
+        </article>
+      </div>
+      <p class="case-note reveal">Названия компаний скрыты. Описана только моя роль в проектах.</p>
+    </section>
+
+    <section class="about section-shell" id="about">
+      <div class="about-title reveal">
+        <p class="section-kicker">Опыт и компетенции</p>
+        <h2>Понимаю бизнес.<br><em>Говорю с технической командой.</em></h2>
+      </div>
+      <div class="about-copy reveal">
+        <p class="about-lead">Более 4 лет работаю на стыке аналитики, CRM и бизнес-процессов. Основной опыт связан с девелопментом и автомобильным бизнесом.</p>
+        <p>Разбираю путь клиента от рекламы до сделки, помогаю находить проблемы в воронке и приводить данные к понятной бизнес-логике.</p>
+        <div class="skills" aria-label="Компетенции">
+          <span>Воронка продаж</span><span>Маркетинговая аналитика</span><span>CRM</span><span>Бизнес-процессы</span><span>Анализ данных</span><span>Рекламные источники</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="process section-shell" id="process">
+      <div class="section-intro reveal">
+        <p class="section-kicker">Как строится работа</p>
+        <h2>От первого вопроса<br>до работающего решения.</h2>
+      </div>
+      <ol class="process-list">
+        <li class="reveal"><span>01</span><div><h3>Знакомимся с задачей</h3><p>Коротко разбираем проблему и ожидаемый результат.</p></div></li>
+        <li class="reveal"><span>02</span><div><h3>Собираю данные</h3><p>Определяем, что нужно посмотреть и какие данные доступны.</p></div></li>
+        <li class="reveal"><span>03</span><div><h3>Провожу анализ</h3><p>Разбираю воронку, источники, CRM и процессы.</p></div></li>
+        <li class="reveal"><span>04</span><div><h3>Передаю рекомендации</h3><p>Фиксирую проблемы, приоритеты и следующие шаги.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-inner section-shell reveal">
+        <p class="section-kicker">Есть задача?</p>
+        <h2>Хотите понять,<br><em>где теряются лиды?</em></h2>
+        <p>Опишите задачу в нескольких предложениях. Посмотрим, с чего лучше начать.</p>
+        <div class="contact-actions">
+          <a class="button button-light telegram-link" href="https://t.me/Artmaxst" target="_blank" rel="noreferrer">Обсудить задачу <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Консультант по воронке продаж и маркетинговой аналитике</p>
+    <p>© <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
