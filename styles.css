@@ -32,7 +32,7 @@ button { font: inherit; }
 .menu-toggle, .mobile-nav { display: none; }
 
 .hero { position: relative; min-height: 92vh; width: calc(100% - 24px); margin: 12px auto 0; overflow: hidden; color: var(--white); background: #061127; border-radius: var(--radius-lg); }
-.hero-network { position: absolute; inset: 0; overflow: hidden; background: radial-gradient(circle at 84% 52%, rgba(53,88,255,.2), transparent 25%), #07101f; transform: scale(1.035); transform-origin: center; will-change: transform; }
+.hero-network { position: absolute; inset: 0; overflow: hidden; background: radial-gradient(circle at 78% 51%, rgba(53,88,255,.22), transparent 24%), radial-gradient(circle at 61% 50%, rgba(114,255,226,.07), transparent 18%), #07101f; transform: scale(1.035); transform-origin: center; will-change: transform; }
 .hero-network svg { width: 100%; height: 100%; display: block; }
 .hero-grid path { fill: none; stroke: rgba(255,255,255,.055); stroke-width: 1; vector-effect: non-scaling-stroke; }
 .hero-route-base, .hero-route-live, .hero-output { fill: none; vector-effect: non-scaling-stroke; }
@@ -40,11 +40,17 @@ button { font: inherit; }
 .hero-route-live { stroke: url(#heroLine); stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 9 22; filter: url(#heroGlow); animation: hero-route-flow 3.8s linear infinite; }
 .hero-route-b { animation-delay: -.9s; }.hero-route-c { animation-delay: -1.8s; }.hero-route-d { animation-delay: -2.7s; }
 .hero-signal { fill: var(--lime); filter: url(#heroGlow); }
-.hero-merge-ring { fill: none; stroke: rgba(115,255,226,.28); transform-box: fill-box; transform-origin: center; }
-.hero-merge-ring.ring-outer { stroke-width: 2; animation: hero-ring-turn 13s linear infinite; stroke-dasharray: 12 15; }
-.hero-merge-ring.ring-inner { stroke: rgba(255,255,255,.5); stroke-width: 1.5; animation: hero-ring-turn 8s linear infinite reverse; stroke-dasharray: 5 10; }
-.hero-merge-core { fill: var(--lime); filter: url(#heroGlow); animation: hero-core-pulse 2.4s ease-in-out infinite; }
-.hero-output { stroke: #72ffe2; stroke-width: 2.5; filter: url(#heroGlow); }
+.hero-funnel { filter: drop-shadow(0 22px 30px rgba(0,0,0,.42)); }
+.hero-funnel-shell { fill: url(#funnelGlass); stroke: rgba(147,255,230,.24); stroke-width: 1.2; }
+.hero-funnel-rim { fill: rgba(5,12,27,.22); stroke: url(#funnelEdge); stroke-width: 2.1; transform-box: fill-box; transform-origin: center; animation: hero-funnel-breathe 4s ease-in-out infinite; }
+.hero-funnel-rim.rim-two { animation-delay: -.7s; opacity: .8; }
+.hero-funnel-rim.rim-three { animation-delay: -1.4s; opacity: .68; }
+.hero-funnel-rim.rim-four { animation-delay: -2.1s; opacity: .58; }
+.hero-funnel-throat { fill: rgba(114,255,226,.18); stroke: #72ffe2; stroke-width: 2; filter: url(#heroGlow); transform-box: fill-box; transform-origin: center; animation: hero-throat-pulse 2.4s ease-in-out infinite; }
+.hero-funnel-flow { fill: none; stroke: url(#heroLine); stroke-width: 1.7; stroke-linecap: round; stroke-dasharray: 7 15; filter: url(#heroGlow); animation: hero-funnel-flow 2.4s linear infinite; }
+.hero-funnel-flow.flow-two { animation-delay: -.6s; }.hero-funnel-flow.flow-three { animation-delay: -1.2s; }.hero-funnel-flow.flow-four { animation-delay: -1.8s; }
+.hero-output { stroke: #72ffe2; stroke-width: 2.5; stroke-dasharray: 8 13; filter: url(#heroGlow); animation: hero-output-flow 1.4s linear infinite; }
+.hero-output-signal { fill: var(--lime); filter: url(#heroGlow); }
 .hero-goal-wave, .hero-goal-orbit, .hero-goal-core { transform-box: fill-box; transform-origin: center; }
 .hero-goal-wave { fill: none; stroke: rgba(114,255,226,.45); animation: hero-goal-wave 3s ease-out infinite; }
 .hero-goal-orbit { fill: none; stroke: rgba(255,255,255,.22); stroke-dasharray: 7 12; animation: hero-ring-turn 10s linear infinite; }
@@ -53,7 +59,10 @@ button { font: inherit; }
 .hero-goal .hero-goal-main { fill: #fff; font-size: 17px; letter-spacing: -.03em; }
 @keyframes hero-route-flow { to { stroke-dashoffset: -62; } }
 @keyframes hero-ring-turn { to { transform: rotate(360deg); } }
-@keyframes hero-core-pulse { 50% { transform: scale(1.35); opacity: .72; } }
+@keyframes hero-funnel-flow { to { stroke-dashoffset: -44; } }
+@keyframes hero-output-flow { to { stroke-dashoffset: -42; } }
+@keyframes hero-funnel-breathe { 50% { transform: scale(1.035); opacity: .92; } }
+@keyframes hero-throat-pulse { 50% { transform: scale(1.22); fill: rgba(214,255,95,.42); } }
 @keyframes hero-goal-wave { 0% { opacity: .7; transform: scale(.8); } 80%,100% { opacity: 0; transform: scale(1.35); } }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,7,10,.95) 0%, rgba(5,7,10,.76) 38%, rgba(5,7,10,.16) 72%), linear-gradient(0deg, rgba(5,7,10,.86) 0%, transparent 48%); }
 .hero-inner { position: relative; z-index: 2; min-height: 92vh; padding-top: 156px; padding-bottom: 22px; display: flex; flex-direction: column; justify-content: space-between; }
@@ -260,7 +269,7 @@ button { font: inherit; }
   .section-shell { width: min(100% - 28px, 1180px); }
   .site-header { top: max(9px, env(safe-area-inset-top)); width: calc(100% - 20px); height: 58px; padding-left: 16px; }
   .hero { width: calc(100% - 10px); min-height: 92svh; margin-top: 5px; border-radius: 20px; }
-  .hero-network { transform: scale(1.14) translateX(10%); opacity: .9; }
+  .hero-network { transform: scale(1.14) translateX(-10%); opacity: .92; }
   .hero-shade { background: linear-gradient(90deg, rgba(5,7,10,.88), rgba(5,7,10,.3)), linear-gradient(0deg, rgba(5,7,10,.9), transparent 62%); }
   .hero-inner { min-height: 92svh; padding-top: 118px; padding-bottom: 12px; }
   .hero h1 { font-size: clamp(2.8rem, 14vw, 4.2rem); }
@@ -341,8 +350,8 @@ button { font: inherit; }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; filter: none; clip-path: none; transition: none; }
   .button, .case-card, .service-card, .service-card p, .service-card li { transition: none; }
-  .route-live, .map-sources span, .target-pulse, .hero-route-live, .hero-merge-ring, .hero-merge-core, .hero-goal-wave, .hero-goal-orbit { animation: none; }
-  .route-signal, .hero-signal { display: none; }
+  .route-live, .map-sources span, .target-pulse, .hero-route-live, .hero-funnel-rim, .hero-funnel-flow, .hero-funnel-throat, .hero-output, .hero-goal-wave, .hero-goal-orbit { animation: none; }
+  .route-signal, .hero-signal, .hero-output-signal { display: none; }
   .example-funnel .funnel-demo > div, .example-process .process-demo > div { opacity: 1; transform: none; animation: none; }
   .source-demo i::after { transform: scaleX(1); animation: none; }
 }
