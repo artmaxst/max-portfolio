@@ -112,6 +112,12 @@ button { font: inherit; }
 .service-card.featured p { color: rgba(255,255,255,.65); }
 .service-card ul { margin: 0; padding: 0; list-style: none; }
 .service-card li { padding: 11px 0; border-top: 1px solid currentColor; font-size: .85rem; font-weight: 700; opacity: .7; transition: opacity .62s ease, transform .62s ease; }
+.consultation-offer { margin-top: 14px; padding: 34px 38px; display: flex; align-items: center; justify-content: space-between; gap: 40px; color: var(--white); background: var(--ink); border-radius: var(--radius-md); }
+.consultation-offer > div { max-width: 780px; }
+.consultation-offer .section-kicker { margin-bottom: 14px; color: var(--lime); }
+.consultation-offer h3 { margin: 0 0 12px; font-size: clamp(1.7rem, 3vw, 2.8rem); line-height: 1.05; letter-spacing: -.04em; }
+.consultation-offer p:not(.section-kicker) { margin: 0; color: rgba(255,255,255,.65); }
+.consultation-offer .button { flex: 0 0 auto; }
 
 @media (min-width: 901px) and (hover: hover) {
   .service-card.featured { flex-grow: 1.28; }
@@ -235,6 +241,8 @@ button { font: inherit; }
   .map-target { width: 170px; }.map-target strong { font-size: 1.35rem; }
   .service-list { flex-direction: column; }
   .service-card { min-height: 390px; }
+  .consultation-offer { padding: 28px 24px; align-items: flex-start; flex-direction: column; gap: 26px; }
+  .consultation-offer .button { width: 100%; }
   .example-card:nth-child(1), .example-card:nth-child(2), .example-card:nth-child(3) { grid-column: span 12; }
   .case-card:nth-child(1), .case-card:nth-child(2), .case-card:nth-child(3) { grid-column: span 12; }
   .about { grid-template-columns: 1fr; gap: 38px; }
