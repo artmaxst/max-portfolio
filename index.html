@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1020'/%3E%3Cpath d='M15 41V23l17 12 17-12v18' fill='none' stroke='%23c7ff4a' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=responsive-3">
+  <link rel="stylesheet" href="styles.css?v=journey-1">
 </head>
 <body id="top">
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
@@ -40,39 +40,13 @@
       <div class="hero-network" aria-hidden="true">
         <svg viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid meet">
           <defs>
-            <linearGradient id="heroLine" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#d6ff5f" stop-opacity=".08"/>
-              <stop offset=".55" stop-color="#d6ff5f" stop-opacity=".72"/>
-              <stop offset="1" stop-color="#72ffe2"/>
+            <linearGradient id="journeyLine" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#d6ff5f" stop-opacity=".15"/>
+              <stop offset=".52" stop-color="#72ffe2"/>
+              <stop offset="1" stop-color="#617cff"/>
             </linearGradient>
-            <radialGradient id="heroGoal" cx="42%" cy="38%" r="70%">
-              <stop offset="0" stop-color="#7a8fff"/>
-              <stop offset=".5" stop-color="#3558ff"/>
-              <stop offset="1" stop-color="#1831b5"/>
-            </radialGradient>
-            <linearGradient id="funnelGlass" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#dce6ff" stop-opacity=".34"/>
-              <stop offset=".42" stop-color="#7790ff" stop-opacity=".24"/>
-              <stop offset="1" stop-color="#8dffe8" stop-opacity=".38"/>
-            </linearGradient>
-            <linearGradient id="funnelEdge" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#ffffff" stop-opacity=".72"/>
-              <stop offset=".5" stop-color="#72ffe2" stop-opacity=".18"/>
-              <stop offset="1" stop-color="#3558ff" stop-opacity=".58"/>
-            </linearGradient>
-            <linearGradient id="funnelStageOne" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#ffffff" stop-opacity=".17"/>
-              <stop offset="1" stop-color="#7890ff" stop-opacity=".08"/>
-            </linearGradient>
-            <linearGradient id="funnelStageTwo" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#9fb0ff" stop-opacity=".18"/>
-              <stop offset="1" stop-color="#72ffe2" stop-opacity=".08"/>
-            </linearGradient>
-            <clipPath id="heroFunnelClip">
-              <path d="M0 -104 C62 -100 116 -72 186 -20 L186 20 C116 72 62 100 0 104 Z"/>
-            </clipPath>
             <filter id="heroGlow" x="-100%" y="-100%" width="300%" height="300%">
-              <feGaussianBlur stdDeviation="8" result="blur"/>
+              <feGaussianBlur stdDeviation="7" result="blur"/>
               <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
             </filter>
           </defs>
@@ -82,49 +56,18 @@
             <path d="M120 0V720M240 0V720M360 0V720M480 0V720M600 0V720M720 0V720M840 0V720M960 0V720M1080 0V720"/>
           </g>
 
-          <g class="hero-routes">
-            <path class="hero-route-base" d="M50 120 C330 120 520 225 710 270"/>
-            <path class="hero-route-base" d="M50 275 C340 275 540 300 710 330"/>
-            <path class="hero-route-base" d="M50 445 C340 445 540 420 710 390"/>
-            <path class="hero-route-base" d="M50 600 C330 600 520 495 710 450"/>
-            <path class="hero-route-live hero-route-a" d="M50 120 C330 120 520 225 710 270"/>
-            <path class="hero-route-live hero-route-b" d="M50 275 C340 275 540 300 710 330"/>
-            <path class="hero-route-live hero-route-c" d="M50 445 C340 445 540 420 710 390"/>
-            <path class="hero-route-live hero-route-d" d="M50 600 C330 600 520 495 710 450"/>
+          <g class="hero-journey">
+            <path class="hero-journey-base" d="M120 545 C250 500 350 545 460 430 C580 305 650 270 760 350 C850 420 930 455 1015 350 C1080 270 1115 220 1170 185"/>
+            <path class="hero-journey-live" d="M120 545 C250 500 350 545 460 430 C580 305 650 270 760 350 C850 420 930 455 1015 350 C1080 270 1115 220 1170 185"/>
 
-            <circle class="hero-signal" r="5"><animateMotion dur="5.2s" repeatCount="indefinite" path="M50 120 C330 120 520 225 710 270"/></circle>
-            <circle class="hero-signal" r="5"><animateMotion begin="-1.3s" dur="5.2s" repeatCount="indefinite" path="M50 275 C340 275 540 300 710 330"/></circle>
-            <circle class="hero-signal" r="5"><animateMotion begin="-2.6s" dur="5.2s" repeatCount="indefinite" path="M50 445 C340 445 540 420 710 390"/></circle>
-            <circle class="hero-signal" r="5"><animateMotion begin="-3.9s" dur="5.2s" repeatCount="indefinite" path="M50 600 C330 600 520 495 710 450"/></circle>
-          </g>
+            <g class="hero-journey-node node-one" transform="translate(120 545)"><circle class="node-halo" r="18"/><circle class="node-core" r="5"/></g>
+            <g class="hero-journey-node node-two" transform="translate(460 430)"><circle class="node-halo" r="22"/><circle class="node-core" r="6"/></g>
+            <g class="hero-journey-node node-three" transform="translate(760 350)"><circle class="node-halo" r="26"/><circle class="node-core" r="7"/></g>
+            <g class="hero-journey-node node-four" transform="translate(1015 350)"><circle class="node-halo" r="30"/><circle class="node-core" r="8"/></g>
+            <g class="hero-journey-node node-final" transform="translate(1170 185)"><circle class="node-wave" r="24"/><circle class="node-halo" r="18"/><circle class="node-core" r="9"/></g>
 
-          <g class="hero-funnel" transform="translate(710 360)">
-            <path class="hero-funnel-shell" d="M0 -104 C62 -100 116 -72 186 -20 L186 20 C116 72 62 100 0 104 Z"/>
-            <g class="hero-funnel-stages" clip-path="url(#heroFunnelClip)">
-              <rect x="0" y="-108" width="58" height="216" fill="url(#funnelStageOne)"/>
-              <rect x="58" y="-108" width="54" height="216" fill="url(#funnelStageTwo)"/>
-              <rect x="112" y="-108" width="46" height="216" fill="url(#funnelStageOne)"/>
-              <rect x="158" y="-108" width="30" height="216" fill="url(#funnelStageTwo)"/>
-            </g>
-            <path class="hero-funnel-flow flow-one" d="M-2 -90 C74 -74 126 -36 188 -10"/>
-            <path class="hero-funnel-flow flow-two" d="M-2 -30 C72 -26 130 -14 188 -4"/>
-            <path class="hero-funnel-flow flow-three" d="M-2 30 C72 26 130 14 188 4"/>
-            <path class="hero-funnel-flow flow-four" d="M-2 90 C74 74 126 36 188 10"/>
-            <ellipse class="hero-funnel-rim rim-one" cx="0" cy="0" rx="42" ry="104"/>
-            <ellipse class="hero-funnel-rim rim-two" cx="58" cy="0" rx="32" ry="78"/>
-            <ellipse class="hero-funnel-rim rim-three" cx="112" cy="0" rx="23" ry="53"/>
-            <ellipse class="hero-funnel-rim rim-four" cx="158" cy="0" rx="15" ry="30"/>
-            <ellipse class="hero-funnel-throat" cx="188" cy="0" rx="9" ry="18"/>
-          </g>
-
-          <path class="hero-output" d="M898 360 H963"/>
-          <circle class="hero-output-signal" r="5"><animateMotion dur="2.2s" repeatCount="indefinite" path="M898 360 H963"/></circle>
-          <g class="hero-goal" transform="translate(1035 360)">
-            <circle class="hero-goal-wave" r="70"/>
-            <circle class="hero-goal-orbit" r="61"/>
-            <circle class="hero-goal-core" r="50"/>
-            <text y="-8">БИЗНЕС-ЦЕЛЬ</text>
-            <text class="hero-goal-main" y="17">Результат</text>
+            <circle class="hero-journey-signal" r="6"><animateMotion dur="7s" repeatCount="indefinite" path="M120 545 C250 500 350 545 460 430 C580 305 650 270 760 350 C850 420 930 455 1015 350 C1080 270 1115 220 1170 185"/></circle>
+            <circle class="hero-journey-signal signal-secondary" r="3"><animateMotion begin="-3.5s" dur="7s" repeatCount="indefinite" path="M120 545 C250 500 350 545 460 430 C580 305 650 270 760 350 C850 420 930 455 1015 350 C1080 270 1115 220 1170 185"/></circle>
           </g>
         </svg>
       </div>
@@ -291,7 +234,7 @@
         <h2>Макс.<br><em>Бизнес-аналитик.</em></h2>
       </div>
       <div class="about-copy reveal">
-        <p class="about-lead">Более 4 лет работаю на стыке аналитики, CRM и бизнес-процессов. Основной опыт связан с девелопментом и автомобильным бизнесом.</p>
+        <p class="about-lead">Более 4 лет работаю на стыке аналитики, CRM и бизнес-процессов. Основной опыт связан с девелопментом.</p>
         <p>Разбираю воронки продаж, рекламные источники и бизнес-процессы, нахожу проблемы в данных и помогаю превратить их в понятные решения для бизнеса.</p>
         <div class="skills" aria-label="Компетенции">
           <span>Воронка продаж</span><span>Маркетинговая аналитика</span><span>CRM</span><span>Бизнес-процессы</span><span>Анализ данных</span><span>Рекламные источники</span>
