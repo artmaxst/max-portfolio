@@ -21,7 +21,7 @@ button { font: inherit; }
 .progress { position: fixed; inset: 0 0 auto; height: 3px; z-index: 100; }
 .progress span { display: block; width: 0; height: 100%; background: var(--lime); }
 
-.site-header { position: fixed; isolation: isolate; z-index: 50; top: 14px; left: 50%; transform: translateX(-50%); width: min(1240px, calc(100% - 28px)); height: 66px; padding: 0 12px; display: flex; align-items: center; overflow: visible; background: linear-gradient(135deg, rgba(255,255,255,.78), rgba(235,240,243,.58)); border: 1px solid rgba(255,255,255,.86); border-radius: 22px; box-shadow: 0 18px 50px rgba(15,22,32,.12), inset 0 1px 0 rgba(255,255,255,.9); backdrop-filter: blur(22px) saturate(145%); -webkit-backdrop-filter: blur(22px) saturate(145%); }
+.site-header { position: fixed; isolation: isolate; z-index: 50; top: 14px; left: 50%; transform: translateX(-50%); width: min(1240px, calc(100% - 40px)); height: 66px; padding: 0 clamp(24px, 3vw, 40px); display: flex; align-items: center; overflow: visible; background: linear-gradient(135deg, rgba(255,255,255,.78), rgba(235,240,243,.58)); border: 1px solid rgba(255,255,255,.86); border-radius: 22px; box-shadow: 0 18px 50px rgba(15,22,32,.12), inset 0 1px 0 rgba(255,255,255,.9); backdrop-filter: blur(22px) saturate(145%); -webkit-backdrop-filter: blur(22px) saturate(145%); }
 .site-header::before { content: ""; position: absolute; z-index: -1; inset: -120% 68% 10% -8%; border-radius: inherit; background: radial-gradient(circle, rgba(199,255,61,.2), transparent 70%); pointer-events: none; }
 .brand { font-weight: 800; font-size: 1.25rem; letter-spacing: -.055em; }
 .brand span { color: var(--blue); }
