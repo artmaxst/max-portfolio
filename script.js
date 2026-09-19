@@ -16,7 +16,7 @@ const translations = {
   'Специализация': 'Expertise',
   'Воронка, данные и процессы': 'Funnel, data and processes',
   'Максим Тарасюк': 'Maxim Tarasyuk',
-  'Маркетинговый аналитик': 'Marketing Analyst',
+  'Аналитик по продажам, CRM и маркетингу': 'Sales, CRM & Marketing Analyst',
   'Более 4 лет работаю с воронками продаж, CRM и маркетинговой аналитикой. Основной опыт связан с девелопментом и B2C-бизнесом.': 'I have over four years of experience with sales funnels, CRM and marketing analytics, primarily in real estate development and B2C.',
   'Разбираю воронки продаж, рекламные источники и процессы. Нахожу точки потерь, проблемы в данных и помогаю понять, что именно стоит изменить.': 'I analyze sales funnels, acquisition channels and business processes. I identify drop-off points and data issues, then clarify what should change.',
   'Воронка продаж': 'Sales funnel',
@@ -171,7 +171,7 @@ const applyLanguage = (language) => {
   replaceTextNodes(toEnglish ? translations : reverseTranslations);
   replaceAttributes(toEnglish ? translatedAttributes : reverseAttributes);
   document.documentElement.lang = language;
-  document.title = toEnglish ? 'Maxim Tarasyuk — Marketing Analyst' : 'Максим Тарасюк — маркетинговый аналитик';
+  document.title = toEnglish ? 'Maxim Tarasyuk — Sales, CRM & Marketing Analyst' : 'Максим Тарасюк — аналитик по продажам, CRM и маркетингу';
   document.querySelector('meta[name="description"]')?.setAttribute('content', toEnglish
     ? 'Sales funnel, CRM, acquisition channel and business process analysis for B2C companies.'
     : 'Бизнес-анализ воронки продаж, CRM, рекламных источников и процессов для B2C-компаний.');
