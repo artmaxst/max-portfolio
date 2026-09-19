@@ -17,7 +17,7 @@ const translations = {
   'Воронка, данные и процессы': 'Funnel, data and processes',
   'Максим Тарасюк': 'Maxim Tarasyuk',
   'Аналитик по продажам, CRM и маркетингу': 'Sales, CRM & Marketing Analyst',
-  'Более 4 лет работаю с воронками продаж, CRM и маркетинговой аналитикой. Основной опыт связан с девелопментом и B2C-бизнесом.': 'I have over four years of experience with sales funnels, CRM and marketing analytics, primarily in real estate development and B2C.',
+  'Более 7 лет работаю с продажами и B2B-клиентами. Последние 4+ года - на стыке CRM, маркетинговой аналитики и воронок продаж.': 'I have more than seven years of experience in sales and working with B2B clients. For the past four-plus years, I have worked at the intersection of CRM, marketing analytics and sales funnels.',
   'Разбираю воронки продаж, рекламные источники и процессы. Нахожу точки потерь, проблемы в данных и помогаю понять, что именно стоит изменить.': 'I analyze sales funnels, acquisition channels and business processes. I identify drop-off points and data issues, then clarify what should change.',
   'Воронка продаж': 'Sales funnel',
   'Маркетинговая аналитика': 'Marketing analytics',
